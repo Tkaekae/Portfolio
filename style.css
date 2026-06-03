@@ -158,3 +158,25 @@ h1 {
   border-color: #1d6fa5;       /* darker blue on hover */
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+body {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+nav a:hover {
+  background-color: #3498db;
+  color: white;
+  transition: 0.3s;
+}
+.project-card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+h1 {
+  animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
