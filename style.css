@@ -177,6 +177,30 @@ h1 {
   animation: fadeIn 2s ease-in;
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+from { opacity: 0; }
+to { opacity: 1; }
+}
+h1 {
+color: #3498db;
+text-align: center;
+font-size: 3em;
+animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+from {
+  text-shadow: 0 0 5px #3498db, 0 0 10px #3498db;
+}
+to {
+text-shadow: 0 0 20px #1abc9c, 0 0 40px #1abc9c;
+}
+}
+p {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
