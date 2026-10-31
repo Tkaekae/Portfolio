@@ -45,16 +45,16 @@ nav {
 }
 
 .menu-icon {
-  display: none; /* hidden on desktop */
+  display: none; 
   font-size: 28px;
   cursor: pointer;
   color: #3498db;
 }
 .profile {
-  width: 359px;          /* match your image width */
-  height: 359px;         /* force square */
-  border-radius: 50%;    /* circle */
-  object-fit: cover;     /* fills the circle with the photo */
+  width: 359px;          
+  height: 359px;         
+  border-radius: 50%;    
+  object-fit: cover;     
   display: block;
   margin: 20px auto;
   box-shadow: 0 0 15px rgba(52,152,219,0.6);
@@ -128,21 +128,21 @@ h1 {
   background: #fff;
   border: 4px solid #3498db;
   border-radius: 6px;
-  padding: 30px;              /* smaller padding */
-  margin: 10px auto;          /* space + center them */
-  max-width: 220px;           /* keep them short/narrow */
+  padding: 30px;              
+  margin: 10px auto;          
+  max-width: 220px;           
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;         /* center text inside */
+  text-align: center;       
 }
 
 .project-box h3 {
   margin: 0;
-  font-size: 1em;             /* smaller title */
+  font-size: 1em;           
   color: #333;
 }
 
 .project-box p {
-  font-size: 0.85em;          /* smaller description */
+  font-size: 0.85em;        
   color: #666;
 }
 
@@ -152,10 +152,10 @@ h1 {
   text-decoration: none;
   color: #007acc;
   font-weight: bold;
-  font-size: 0.85em;          /* smaller link text */
+  font-size: 0.85em;         
 }
 .project-box:hover {
-  border-color: #1d6fa5;       /* darker blue on hover */
+  border-color: #1d6fa5;     
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 body {
