@@ -2,7 +2,7 @@ async function loadProjects() {
   try {
     const response = await fetch("https://api.github.com/users/Tkaekae/repos");
     const repos = await response.json();
-    console.log("Fetched repos:", repos); // Debug log
+    console.log("Fetched repos:", repos); 
 
     const container = document.getElementById("projects");
 
@@ -11,7 +11,7 @@ async function loadProjects() {
       return;
     }
 
-    // 🔑 Filter: only show repos with 'portfolio' in the description
+  
     const filteredRepos = repos.filter(repo => repo.description && repo.description.toLowerCase().includes("portfolio"));
 
     if (filteredRepos.length === 0) {
