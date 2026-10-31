@@ -2,20 +2,22 @@ async function loadProjects() {
   try {
     const response = await fetch("https://api.github.com/users/Tkaekae/repos");
     const repos = await response.json();
-    console.log("Fetched repos:", repos); 
-
     const container = document.getElementById("projects");
 
+    container.innerHTML = ""; 
+
     if (!repos || repos.length === 0) {
-      container.innerHTML = "<p>No public projects found. Add repos to GitHub and they’ll show here!</p>";
+      container.innerHTML = "<p>No public projects found.</p>";
       return;
     }
 
-  
-    const filteredRepos = repos.filter(repo => repo.description && repo.description.toLowerCase().includes("portfolio"));
+    const filteredRepos = repos.filter(repo =>
+      repo.description &&
+      repo.description.toLowerCase().includes("portfolio")
+    ).slice(0, 2); 
 
     if (filteredRepos.length === 0) {
-      container.innerHTML = "<p>No portfolio projects found. Tag your repos with 'portfolio' in the description!</p>";
+      container.innerHTML = "<p>No portfolio projects found.</p>";
       return;
     }
 
@@ -29,6 +31,7 @@ async function loadProjects() {
       `;
       container.appendChild(projectBox);
     });
+
   } catch (error) {
     console.error("Error loading projects:", error);
     document.getElementById("projects").innerHTML = "<p>Failed to load projects.</p>";
